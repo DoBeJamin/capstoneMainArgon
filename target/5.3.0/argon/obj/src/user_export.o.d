@@ -1,4 +1,4 @@
-c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/capstoneMainArgon/target/5.3.0/argon//obj/./src/user_export.o: \
+c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/Capstone/capstoneMainArgon/target/5.3.0/argon//obj/./src/user_export.o: \
  src/user_export.c \
  ../../../modules/shared/nRF52840/inc/user_part_export.c \
  ../../../modules/shared/nRF52840/inc/module_user_init.h \

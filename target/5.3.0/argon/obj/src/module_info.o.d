@@ -1,4 +1,4 @@
-c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/capstoneMainArgon/target/5.3.0/argon//obj/./src/module_info.o: \
+c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/Capstone/capstoneMainArgon/target/5.3.0/argon//obj/./src/module_info.o: \
  src/module_info.c ../../../dynalib/inc/module_info.inc \
  ../../../dynalib/inc/module_info.h ../../../services/inc/static_assert.h \
  c\:\users\benja\.particle\toolchains\gcc-arm\10.2.1\arm-none-eabi\include\assert.h \

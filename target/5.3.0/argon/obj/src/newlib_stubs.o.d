@@ -1,4 +1,4 @@
-c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/capstoneMainArgon/target/5.3.0/argon//obj/./src/newlib_stubs.o: \
+c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/Capstone/capstoneMainArgon/target/5.3.0/argon//obj/./src/newlib_stubs.o: \
  src/newlib_stubs.cpp \
  ../../../modules/shared/nRF52840/inc/user-part/newlib_stubs.inc \
  c\:\users\benja\.particle\toolchains\gcc-arm\10.2.1\arm-none-eabi\include\sys\types.h \

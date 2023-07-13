@@ -1,4 +1,4 @@
-c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/capstoneMainArgon/target/5.3.0/argon//obj/./src/user_module.o: \
+c\:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/Capstone/capstoneMainArgon/target/5.3.0/argon//obj/./src/user_module.o: \
  src/user_module.c \
  ../../../modules/shared/nRF52840/inc/user-part/user_module.inc \
  ../../../dynalib/inc/dynalib.h
