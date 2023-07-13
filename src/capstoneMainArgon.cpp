@@ -22,7 +22,7 @@ SYSTEM_THREAD(ENABLED);
 void callback(char *topic, byte *payload, unsigned int length) ;
 MQTT client("lab.thewcl.com", 1883, callback);
 //TOPICS
-String A1_RSSI = "BAR/argon1/RSSI";
+//String A1_RSSI = "BAR/argon1/RSSI";
 String A2_RSSI = "BAR/argon2/RSSI";
 String A3_RSSI = "BAR/argon3/RSSI";
 //Data
@@ -46,6 +46,8 @@ void scanResultCallback(const BleScanResult *scanResult, void *context);
 
 void setup() {
 
+  Serial.begin(9600);
+
   //OLED
   display.setup();
 
@@ -55,7 +57,6 @@ void setup() {
 
   //MQTT
   client.connect(System.deviceID());
-  client.subscribe(A1_RSSI);
   client.subscribe(A2_RSSI);
   client.subscribe(A3_RSSI);
   
@@ -97,11 +98,11 @@ void loop() {
 	BLE.scan(scanResultCallback, NULL);
 
 	if (rssi) {
-
+    Argon1_distance = rssi;
   //MQTT
 		if (client.isConnected()) {
 			string_rssi = String(rssi);
-			client.publish("BAR/argon3/RSSI", string_rssi);
+			client.publish("BAR/argon1/RSSI", string_rssi);
 		} 
 
   }
@@ -110,7 +111,6 @@ void loop() {
 		client.loop();
 	} else {
 		client.connect(System.deviceID());
-    client.subscribe(A1_RSSI);
     client.subscribe(A2_RSSI);
     client.subscribe(A3_RSSI);
 	}
@@ -159,9 +159,10 @@ void callback(char *topic, byte *payload, unsigned int length) {
 
   String callbackTopic = topic; //makes the mqtt topic of the data into an arduino string
 
-  if (callbackTopic.compareTo(A1_RSSI)) {
-    Argon1_distance = value;
-  } else if (callbackTopic.compareTo(A2_RSSI)) {
+  Serial.print("MQTT value: ");
+  Serial.println(value);
+
+  if (callbackTopic.compareTo(A2_RSSI)) {
     Argon2_distance = value;
   } else if (callbackTopic.compareTo(A3_RSSI)) {
     Argon3_distance = value;
